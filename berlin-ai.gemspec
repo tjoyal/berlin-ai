@@ -17,10 +17,10 @@ Gem::Specification.new do |s|
   s.description  = "Berlin Artificial Intelligence"
 
   s.add_dependency 'sinatra', '1.4.3'
-  s.add_dependency 'yajl-ruby', '1.1.0'
+#  s.add_dependency 'yajl-ruby', '1.1.0'
   s.add_dependency 'sinatra-contrib', '1.4.1'
   s.add_dependency 'rainbow', '~>1.1.4'
-  s.add_dependency 'thin', '1.5.1'
+#  s.add_dependency 'thin', '1.5.1'
 
   s.add_development_dependency 'minitest'
   s.add_development_dependency 'pry'

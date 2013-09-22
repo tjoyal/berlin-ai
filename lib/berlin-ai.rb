@@ -1,7 +1,7 @@
 require 'optparse'
 require 'sinatra'
 require 'logger'
-require 'yajl/json_gem'
+# require 'yajl/json_gem'
 
 puts " __                  __ __             _______ _______ "
 puts "|  |--..-----..----.|  |__|.-----.    |   _   |_     _|"
