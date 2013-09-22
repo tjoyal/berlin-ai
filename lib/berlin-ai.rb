@@ -14,6 +14,7 @@ puts
 end
 
 set :verbose, true
+set :logging, nil
 set :logger, Logger.new(STDOUT)
 
 # set tests to false
