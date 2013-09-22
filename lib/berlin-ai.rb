@@ -59,7 +59,7 @@ post '/' do
   begin
     # Check if it's one of the four Berlin keywords
     if ['ping', 'turn', 'game_start', 'game_over'].include?(params[:action])
-      log :info, "New request of type #{params[:action]} : #{params.inspect}"
+      log :info, "New request of type #{params[:action]}" # : #{params.inspect}
 
       game = Berlin::AI::Game.create_or_update(params[:action], params[:infos], params[:map], params[:state])
 
@@ -74,7 +74,7 @@ post '/' do
         moves = game.moves.to_json
 
         # Log time!
-        log :info, "Respond with: #{moves}"
+        log :info, "Respond with: #{moves.length} moves"
 
         # Return the response to Berlin
         return moves
