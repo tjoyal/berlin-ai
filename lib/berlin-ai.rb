@@ -13,7 +13,6 @@ puts
   require File.expand_path(File.dirname( __FILE__ )) + "/ai/#{file}"
 end
 
-set :verbose, true
 set :logging, nil
 set :logger, Logger.new(STDOUT)
 
@@ -49,10 +48,6 @@ OptionParser.new do |opts|
       exit 1
     end
     $test_ais = t
-  end
-
-  opts.on("-v", "--verbose", "Print information to STDOUT") do
-    enable :verbose
   end
 end.parse!
 
@@ -95,9 +90,6 @@ post '/' do
 end
 
 def log level, message
-  # verbose
-  puts message if settings.verbose
-
   # logger
   settings.logger.send(level, message) if settings.logger
 end
